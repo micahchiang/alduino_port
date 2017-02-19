@@ -1,3 +1,16 @@
-<h1>
-  {{title}}
-</h1>
+<div class="app-container">
+  <div class="header">
+    <a href="/" class="home_link">FRANKIE ALDUINO</a>
+  </div>
+  <div class="content">
+    <photo-roll [counter] = 'counter'></photo-roll>
+  </div>
+  <div class="footer">
+    <div class="footer_content info_link">
+      <a href='/'>INFO</a>
+    </div>
+    <div class="footer_content counter">
+       <p>{{counter}} - 21</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+.app-container {
+    margin: 0 auto;
+    width: 100%;
+
+    .header {
+        text-align: right;
+        padding: 2em 0 1em 0;
+        font-size: 16px;
+        width: 79%;
+        margin: 0 auto;
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+
+    .content {
+        width: 100%;
+        margin: 0 auto;
+        height: 600px;
+        display: inline-block;
+    }
+
+    .footer {
+        padding: 1em 0 1em 0;
+        width: 80%;
+        margin: 0 auto;
+
+        .footer_content {
+            width: 49%;
+            display: inline-block;
+        }
+
+        .info_link {
+            text-align: left;
+            a {
+                text-decoration: none;
+            }
+        }
+
+        .counter {
+            text-align: right;
+        }
+    }
+}
