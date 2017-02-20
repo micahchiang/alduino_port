@@ -1,6 +1,6 @@
 .app-container {
     margin: 0 auto;
-    width: 100%;
+    max-width: 1240px;
 
     .header {
         text-align: right;
@@ -41,5 +41,29 @@
         .counter {
             text-align: right;
         }
+    }
+}
+
+.right_nav {
+    width: 49%;
+    height: 600px;
+    z-index: 10;
+    top: 60px;
+    right: 0;
+    position: fixed;
+    &:hover {
+        cursor: e-resize;
+    }
+}
+
+.left_nav {
+    width: 49%;
+    height: 600px;
+    z-index: 10;
+    top: 60px;
+    left: 0;
+    position: fixed;
+    &:hover {
+        cursor: w-resize;
     }
 }

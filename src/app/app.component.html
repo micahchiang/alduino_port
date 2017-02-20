@@ -2,8 +2,13 @@
   <div class="header">
     <a href="/" class="home_link">FRANKIE ALDUINO</a>
   </div>
-  <div class="content">
-    <photo-roll [counter] = 'counter'></photo-roll>
+  <div class="content" [@navigationInitiated]='state'>
+    <photo-roll 
+        [counter] = 'counter'
+        [imageLeft] = 'imageLeft'
+        [imageCenter] = 'imageCenter'
+        [imageRight] = 'imageRight'
+    ></photo-roll>
   </div>
   <div class="footer">
     <div class="footer_content info_link">
@@ -14,3 +19,5 @@
     </div>
   </div>
 </div>
+<div class="left_nav" (click)="previous()"></div>
+<div class="right_nav" (click)="next()"></div>

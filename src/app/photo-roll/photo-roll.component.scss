@@ -3,15 +3,20 @@
     text-align: center;
 
     .photoset_box {
-        max-width: 400px;
+        width: 365px;
         height: 600px;;
         display: inline-block;
         text-align: center;
-        margin: 0 5px;
         img {
             max-height: 90%;
             width: auto;
             margin: 10px auto;
+        }
+
+        .placeholder {
+            max-height: 90%;
+            width: auto;
+            visibility: hidden;
         }
     }
 }

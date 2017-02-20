@@ -8,10 +8,14 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PhotoRollComponent implements OnInit {
 
   @Input() counter: number;
-
+  @Input() imageLeft: string;
+  @Input() imageCenter: string;
+  @Input() imageRight: string;
+  
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

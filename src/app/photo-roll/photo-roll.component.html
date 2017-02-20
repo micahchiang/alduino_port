@@ -1,11 +1,11 @@
 <div class="photoset_container">
     <div class="photoset_box position_one">
-      <img src='/assets/imgs/{{counter}}_l.jpg'>
+      <img [src]='imageLeft' default='/assets/imgs/placeholder.jpg'>
     </div>
     <div class="photoset_box position_two">
-      <img src='/assets/imgs/{{counter}}_c.jpg'>
+      <img [src]='imageCenter' default='/assets/imgs/placeholder.jpg'>
     </div>
     <div class="photoset_box position_three">
-      <img src='/assets/imgs/{{counter}}_r.jpg'>
+      <img [src]='imageRight' default='/assets/imgs/placeholder.jpg'>
     </div>
 </div>
