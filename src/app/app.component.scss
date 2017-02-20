@@ -21,6 +21,8 @@
             text-decoration: none;
             color: black;
             margin-right: 6px;
+            font-size: 22px;
+            letter-spacing: 0.57px;
         }
     }
 
@@ -46,6 +48,9 @@
             a {
                 text-decoration: none;
                 margin-left: 8px;
+                color: #9B9B9B;
+                font-size: 22px;
+                letter-spacing: 0.57px;
             }
         }
 
@@ -66,7 +71,7 @@
     right: 0;
     position: fixed;
     &:hover {
-        cursor: url('/assets/imgs/Page-1-Copy@2x.png'), e-resize;
+        cursor: url('/assets/imgs/rightArrow@1x.png'), e-resize;
     }
         @media only screen 
         and (max-device-width: 740px) 
@@ -83,7 +88,7 @@
     left: 0;
     position: fixed;
     &:hover {
-        cursor: url('/assets/imgs/Page-1@2x.png'), w-resize;
+        cursor: url('/assets/imgs/leftArrow@1x.png'), w-resize;
     }
     @media only screen 
         and (max-device-width: 740px) 
@@ -136,7 +141,7 @@
 
 .info_table {
     border-collapse: collapse;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     position: relative;
     top: 100px;
@@ -162,6 +167,8 @@
         a {
             text-decoration: none;
             color: black;
+            font-size: 22px;
+            letter-spacing: 0.57px;
         }
     }
 
@@ -196,6 +203,8 @@
             a {
                 text-decoration: none;
                 margin-left: 8px;
+                font-size: 22px;
+                letter-spacing: 0.57px;
             }
         }
 
