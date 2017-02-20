@@ -9,6 +9,24 @@
                 -webkit-transform: none !important;
         }
 
+        @media only screen and (min-width: 1500px) {
+        /* Large screen, non-retina */
+            top: 50%;
+            transform: translateY(30%);
+        }
+
+        @media
+        only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 1500px),
+        only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 1500px),
+        only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 1500px),
+        only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1500px),
+        only screen and (                min-resolution: 192dpi) and (min-width: 1500px),
+        only screen and (                min-resolution: 2dppx)  and (min-width: 1500px) { 
+        /* Large screen, retina, stuff to override above media query */
+            top: 50%;
+            transform: translateY(30%);
+        }
+
     .header {
         text-align: right;
         padding: 2em 0 1em 0;
@@ -159,11 +177,29 @@
                 transform: none !important;
                 -webkit-transform: none !important;
         }
+
+        @media only screen and (min-width: 1500px) {
+        /* Large screen, non-retina */
+            transform: translateY(30%);
+    -webkit-transform: translateY(30%);
+        }
+
+        @media
+        only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 1500px),
+        only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 1500px),
+        only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 1500px),
+        only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1500px),
+        only screen and (                min-resolution: 192dpi) and (min-width: 1500px),
+        only screen and (                min-resolution: 2dppx)  and (min-width: 1500px) { 
+        /* Large screen, retina, stuff to override above media query */
+            transform: translateY(30%);
+    -webkit-transform: translateY(30%);
+        }
         .header {
         text-align: right;
         padding: 2em 0 1em 0;
         font-size: 16px;
-        width: 90%;
+        width: 89%;
         margin: 0 auto;
         a {
             text-decoration: none;
