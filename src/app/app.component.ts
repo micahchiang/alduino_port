@@ -20,7 +20,8 @@ import { Component, trigger, state, style, transition, animate, keyframes } from
 export class AppComponent {
   counter = 1;
   state: string = 'inactive';
-
+  showInfo = false;
+  firstLoad = true;
   imageLeft = '/assets/imgs/'+this.counter+'_l.jpg';
   imageCenter = '/assets/imgs/'+this.counter+'_c.jpg';
   imageRight = '/assets/imgs/'+this.counter+'_r.jpg'; 
@@ -55,5 +56,12 @@ export class AppComponent {
         setTimeout(()=>{
           this.state = 'inactive';
         }, 500);
+    }
+
+    toggleInfo() {
+      if(this.firstLoad = true){
+        this.firstLoad = false;
+      }
+      this.showInfo = !this.showInfo
     }
 }
