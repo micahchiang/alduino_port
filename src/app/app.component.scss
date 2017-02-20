@@ -4,6 +4,12 @@
     position: relative;
     top: 50%;
     transform: translateY(30%);
+    @media only screen 
+        and (max-device-width: 740px) 
+            { 
+                transform: none !important;
+                -webkit-transform: none !important;
+        }
 
     .header {
         text-align: right;
@@ -62,6 +68,11 @@
     &:hover {
         cursor: url('/assets/imgs/Page-1-Copy@2x.png'), e-resize;
     }
+        @media only screen 
+        and (max-device-width: 740px) 
+            { 
+                top: 10px;
+        }
 }
 
 .left_nav {
@@ -74,6 +85,11 @@
     &:hover {
         cursor: url('/assets/imgs/Page-1@2x.png'), w-resize;
     }
+    @media only screen 
+        and (max-device-width: 740px) 
+            { 
+                top: 10px;
+        }
 }
 
 .show_overlay {
@@ -131,6 +147,12 @@
     max-width: 1240px;
     transform: translateY(30%);
     -webkit-transform: translateY(30%);
+    @media only screen 
+        and (max-device-width: 740px) 
+            { 
+                transform: none !important;
+                -webkit-transform: none !important;
+        }
         .header {
         text-align: right;
         padding: 2em 0 1em 0;
@@ -154,6 +176,15 @@
         padding: 1em 0 1em 0;
         width: 90%;
         margin: 0 auto;
+
+        @media only screen
+            and (max-device-width: 740px)
+                {
+                    margin-top: 20px;
+                    margin-bottom: 0;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
 
         .footer_content {
             width: 49%;
