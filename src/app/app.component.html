@@ -13,10 +13,7 @@
       <p>{{counter}} - 21</p>
     </div>
   </div>
-</div>
-<div class="left_nav" (click)="previous()"></div>
-<div class="right_nav" (click)="next()"></div>
-<div [ngClass]="{'show_overlay': showInfo, 'hide_overlay': firstLoad, 'hide_overlay_animation': !firstLoad && !showInfo}">
+  <div [ngClass]="{'show_overlay': showInfo, 'hide_overlay': firstLoad, 'hide_overlay_animation': !firstLoad && !showInfo}">
   <div class="app-container_info">
     <div class="header">
       <a href="/" class="home_link" style="color: white">FRANKIE ALDUINO</a>
@@ -26,7 +23,7 @@
             <div style="width:23.5em;display:inline-block;padding-bottom:5px;vertical-align:top;">
               <p style='font-size:16px;'>About</p>
             </div>
-            <div style="display:inline-block;max-width: 650px;padding-bottom: 50px;font-size:20px;line-height:1.4">
+            <div style="display:inline-block;max-width:730px;padding-bottom: 50px;font-size:20px;line-height:1.4">
               Frankie Alduino earned his BFA in Photography from the University of Central Florida. A current resident of New York, Alduino cut his teeth at The Richard Avedon Foundation and thereafter transitioned to work in-house at Annie Leibovitz Studio, He has acquired a visual vocabulary steeped in the richest history of portraiture.
             </div>
             <div style="width:23.5em;display:inline-block;padding-bottom:5px;vertical-align:top;">
@@ -52,3 +49,6 @@
     </div>
   </div>
 </div>
+</div>
+<div class="left_nav" (click)="previous()"></div>
+<div class="right_nav" (click)="next()"></div>

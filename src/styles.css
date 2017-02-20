@@ -34,7 +34,9 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	font-family: 'optimaregular', Helvetica, sans-serif; 
+	font-family: 'optimaregular', Helvetica, sans-serif;
+	webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale; 
 }
 ol, ul {
 	list-style: none;
