@@ -145,6 +145,11 @@
     margin: 0 auto;
     position: relative;
     top: 100px;
+    @media only screen 
+        and (max-device-width: 740px)
+            {
+                top: 20px;
+            }
 }
 
 .app-container_info {
@@ -162,7 +167,7 @@
         text-align: right;
         padding: 2em 0 1em 0;
         font-size: 16px;
-        width: 90%;
+        width: 89%;
         margin: 0 auto;
         a {
             text-decoration: none;
@@ -181,7 +186,7 @@
 
     .footer {
         padding: 1em 0 1em 0;
-        width: 90%;
+        width: 89%;
         margin: 0 auto;
 
         @media only screen
