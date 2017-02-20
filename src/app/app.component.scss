@@ -1,16 +1,20 @@
 .app-container {
     margin: 0 auto;
     max-width: 1240px;
+    position: relative;
+    top: 50%;
+    transform: translateY(30%);
 
     .header {
         text-align: right;
         padding: 2em 0 1em 0;
         font-size: 16px;
-        width: 79%;
+        width: 90%;
         margin: 0 auto;
         a {
             text-decoration: none;
             color: black;
+            margin-right: 6px;
         }
     }
 
@@ -23,7 +27,7 @@
 
     .footer {
         padding: 1em 0 1em 0;
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
 
         .footer_content {
@@ -35,11 +39,15 @@
             text-align: left;
             a {
                 text-decoration: none;
+                margin-left: 8px;
             }
         }
 
         .counter {
             text-align: right;
+            p {
+                margin-right: -10px;
+            }
         }
     }
 }
@@ -52,7 +60,7 @@
     right: 0;
     position: fixed;
     &:hover {
-        cursor: e-resize;
+        cursor: url('/assets/imgs/Page-1-Copy@2x.png'), e-resize;
     }
 }
 
@@ -64,7 +72,7 @@
     left: 0;
     position: fixed;
     &:hover {
-        cursor: w-resize;
+        cursor: url('/assets/imgs/Page-1@2x.png'), w-resize;
     }
 }
 
@@ -116,4 +124,52 @@
     margin: 0 auto;
     position: relative;
     top: 100px;
+}
+
+.app-container_info {
+    margin: 0 auto;
+    max-width: 1240px;
+    transform: translateY(30%);
+    -webkit-transform: translateY(30%);
+        .header {
+        text-align: right;
+        padding: 2em 0 1em 0;
+        font-size: 16px;
+        width: 90%;
+        margin: 0 auto;
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+
+    .content {
+        width: 100%;
+        margin: 0 auto;
+        height: 600px;
+        display: inline-block;
+    }
+
+    .footer {
+        padding: 1em 0 1em 0;
+        width: 90%;
+        margin: 0 auto;
+
+        .footer_content {
+            width: 49%;
+            display: inline-block;
+        }
+
+        .info_link {
+            text-align: left;
+            a {
+                text-decoration: none;
+                margin-left: 8px;
+            }
+        }
+
+        .counter {
+            text-align: right;
+        }
+    }
 }
