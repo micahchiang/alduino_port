@@ -3,19 +3,16 @@
     text-align: center;
 
     .photoset_box {
-        width: 365px;
-        height: 600px;;
+        width: 32%;
         display: inline-block;
         text-align: center;
         img {
-            max-height: 90%;
-            width: auto;
+            width: 100%;
             margin: 10px auto;
         }
 
         .placeholder {
-            max-height: 90%;
-            width: auto;
+            width: 100%;
             visibility: hidden;
         }
     }

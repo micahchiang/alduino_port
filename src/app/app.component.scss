@@ -8,7 +8,6 @@
                 transform: none !important;
                 -webkit-transform: none !important;
         }
-
         @media only screen and (min-width: 1500px) {
         /* Large screen, non-retina */
             top: 50%;
@@ -43,47 +42,16 @@
     }
 
     .content {
-        width: 100%;
+        width: 95%;
         margin: 0 auto;
-        height: 600px;
-        display: inline-block;
-    }
-
-    .footer {
-        padding: 1em 0 1em 0;
-        width: 90%;
-        margin: 0 auto;
-
-        .footer_content {
-            width: 49%;
-            display: inline-block;
-        }
-
-        .info_link {
-            text-align: left;
-            a {
-                text-decoration: none;
-                margin-left: 8px;
-                color: #9B9B9B;
-                font-size: 22px;
-                letter-spacing: 0.57px;
-            }
-        }
-
-        .counter {
-            text-align: right;
-            p {
-                margin-right: -10px;
-            }
-        }
     }
 }
 
 .right_nav {
     width: 49%;
-    height: 600px;
+    height: 40%;
     z-index: 10;
-    top: 60px;
+    top: 15%;
     right: 0;
     position: fixed;
     &:hover {
@@ -98,9 +66,9 @@
 
 .left_nav {
     width: 49%;
-    height: 600px;
+    height: 40%;
     z-index: 10;
-    top: 60px;
+    top: 15%;
     left: 0;
     position: fixed;
     &:hover {
@@ -119,7 +87,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    overflow: hidden;
+    overflow: scroll;
     background-color: black;
     animation-name: fadeIn;
     animation-duration: 1s;
@@ -133,8 +101,6 @@
 
 .hide_overlay {
     opacity: 0;
-    width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
     position: fixed;
@@ -177,7 +143,6 @@
                 transform: none !important;
                 -webkit-transform: none !important;
         }
-
         @media only screen and (min-width: 1500px) {
         /* Large screen, non-retina */
             transform: translateY(30%);
@@ -197,7 +162,7 @@
         }
         .header {
         text-align: right;
-        padding: 2em 0 1em 0;
+        padding: 2em 0 3em 0;
         font-size: 16px;
         width: 89%;
         margin: 0 auto;
@@ -210,26 +175,32 @@
     }
 
     .content {
-        width: 100%;
+        width: 95%;
         margin: 0 auto;
-        height: 600px;
-        display: inline-block;
     }
+
+    .overlay_footer {
+        color: white;
+        width: 95%;
+        position: fixed;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        .footer-block {
+            display: inline-block;
+            width: 32%;
+        }
+    }
+}
 
     .footer {
         padding: 1em 0 1em 0;
-        width: 89%;
+        width: 90%;
         margin: 0 auto;
-
-        @media only screen
-            and (max-device-width: 740px)
-                {
-                    margin-top: 20px;
-                    margin-bottom: 0;
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-
+        position: fixed;
+        bottom: 5px;
+        left: 0;
+        right: 0;
         .footer_content {
             width: 49%;
             display: inline-block;
@@ -240,6 +211,7 @@
             a {
                 text-decoration: none;
                 margin-left: 8px;
+                color: #9B9B9B;
                 font-size: 22px;
                 letter-spacing: 0.57px;
             }
@@ -247,6 +219,8 @@
 
         .counter {
             text-align: right;
+            p {
+                margin-right: -10px;
+            }
         }
     }
-}
