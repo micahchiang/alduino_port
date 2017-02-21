@@ -181,11 +181,9 @@
 
     .overlay_footer {
         color: white;
-        width: 95%;
-        position: fixed;
-        bottom: 20px;
-        left: 0;
-        right: 0;
+        width: 100%;
+        position: relative;
+        bottom: -9em;
         .footer-block {
             display: inline-block;
             width: 32%;
