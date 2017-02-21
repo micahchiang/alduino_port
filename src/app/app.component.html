@@ -1,55 +1,49 @@
-<div class="app-container">
-  <div class="header">
-    <a href="/" class="home_link">FRANKIE ALDUINO</a>
-  </div>
-  <div class="content">
-    <photo-roll [counter]='counter' [imageLeft]='imageLeft' [imageCenter]='imageCenter' [imageRight]='imageRight'></photo-roll>
-  </div>
-</div>
-<div class="left_nav" (click)="previous()"></div>
-<div class="right_nav" (click)="next()"></div>
-<div *ngIf="showInfo" [ngClass]="{'show_overlay': showInfo, 'hide_overlay': firstLoad, 'hide_overlay_animation': !firstLoad && !showInfo}">
-    <div class="app-container_info">
-      <div class="header">
-        <a href="/" class="home_link" style="color: white">FRANKIE ALDUINO</a>
+<div class="wrapper" [ngClass]="{'show_overlay':showInfo}">
+  <div class="app-container">
+    <div class="header">
+      <a href="/" class="home_link" [ngClass]="{'info_header':showInfo}">FRANKIE ALDUINO</a>
+    </div>
+    <div class="content">
+      <div *ngIf="!showInfo" class="left_nav" (click)="previous()"></div>
+      <div *ngIf="!showInfo" class="right_nav" (click)="next()"></div>
+      <photo-roll *ngIf="!showInfo" [counter]='counter' [imageLeft]='imageLeft' [imageCenter]='imageCenter' [imageRight]='imageRight'></photo-roll>
+      <div *ngIf="showInfo" class="content" style="color:white;max-height:800px;">
+        <div class="category_title_box">
+          <p>About</p>
+        </div>
+        <div class="category_content_box" style="font-size:20px;">
+          Frankie Alduino earned his BFA in Photography from the University of Central Florida. A current resident of New York, Alduino cut his teeth at The Richard Avedon Foundation and thereafter transitioned to work in-house at Annie Leibovitz Studio, He has acquired a visual vocabulary steeped in the richest history of portraiture.
+        </div>
+        <div class="category_title_box">
+          <p>Production Work</p>
+        </div>
+        <div class="category_content_box list_box">
+          <ul style="font-size:20px;line-height:1.4;margin-left:5px;">
+            <li>2016 &#8212; Vogue &#8212; Adele</li>
+            <li>2016 &#8212; Vogue &#8212; Michelle Obama</li>
+            <li>2016 &#8212; Moncler F/W</li>
+            <li>2016 &#8212; Pirelli</li>
+            <li>2015 &#8212; Vogue &#8212; Angelina Jolie</li>
+            <li>2015 &#8212; Dunhill S/S</li>
+            <li>2014 &#8212; Vogue &#8212; Amy Adams</li>
+            <li>2014 &#8212; Louis Vuitton F/W</li>
+            <li>2014 &#8212; Prada F/W</li>
+          </ul>
+        </div>
       </div>
-      <div class="content" style="color:white;">
-          <div style="width:20em;display:inline-block;padding-bottom:5px;vertical-align:top;">
-            <p style='font-size:16px;margin-left:2em;'>About</p>
-          </div>
-          <div style="display:inline-block;max-width:700px;padding-bottom: 50px;font-size:20px;line-height:1.4; margin-top: -5px;margin-left:2em;">
-            Frankie Alduino earned his BFA in Photography from the University of Central Florida. A current resident of New York, Alduino cut his teeth at The Richard Avedon Foundation and thereafter transitioned to work in-house at Annie Leibovitz Studio, He has acquired a visual vocabulary steeped in the richest history of portraiture.
-          </div>
-          <div style="width:20em;display:inline-block;padding-bottom:5px;vertical-align:top;margin-top: -5px;">
-            <p style='font-size:16px;margin-left:2em;'>Production Work</p>
-          </div>
-          <div style="display:inline-block;margin-top: -10px;margin-left:2em;">
-            <ul style="font-size:20px;line-height:1.4;margin-left:5px;">
-              <li>2016 &#8212; Vogue &#8212; Adele</li>
-              <li>2016 &#8212; Vogue &#8212; Michelle Obama</li>
-              <li>2016 &#8212; Moncler F/W</li>
-              <li>2016 &#8212; Pirelli</li>
-              <li>2015 &#8212; Vogue &#8212; Angelina Jolie</li>
-              <li>2015 &#8212; Dunhill S/S</li>
-              <li>2014 &#8212; Vogue &#8212; Amy Adamas</li>
-              <li>2014 &#8212; Louis Vuitton F/W</li>
-              <li>2014 &#8212; Prada F/W</li>
-            </ul>
-          </div>
-      </div>
-      <div class="overlay_footer">
-        <div class="footer-block" style="font-size:22px;vertical-align: top;"><a style="text-decoration:none;color:white;margin-left: 2em;" href="#" (click)="toggleInfo()">CLOSE</a></div>
-        <div class="footer-block">studio@frankiealduino.com</div>
-        <div class="footer-block" style="text-align: right;">Instagram: @frankiealduino</div>
+      <div class="footer">
+        <div class="footer_block" [ngClass]="{'info_footer_close':showInfo}">
+          <a style="color:#9B9B9B;" class="toggle_link" *ngIf="!showInfo" (click)='toggleInfo()' href='#'>INFO</a>
+          <a style="color:white;"class="toggle_link" *ngIf="showInfo"  (click)='toggleInfo()' href='#'>CLOSE</a>
+        </div>
+        <div class="footer_block" [ngClass]="{'info_footer_block': showInfo}">
+          <a *ngIf="showInfo" style="text-decoration:none;color:white;" href="mailto:studio@frankiealduino.com">studio@frankiealduino.com</a>
+        </div>
+        <div class="footer_block" style="text-align:right;" [ngClass]="{'info_footer_block': showInfo}">
+          <p *ngIf="!showInfo" style="text-align:right;">{{counter}} &#8212; 21</p>
+          <a *ngIf="showInfo" target="_blank" href="https://www.instagram.com/frankiealduino/" class="insta_link">Instagram: @frankiealduino</a>
+        </div>
       </div>
     </div>
-  </div>
-
-<div class="footer">
-  <div class="footer_content info_link">
-    <a (click)='toggleInfo()' href='#'>INFO</a>
-  </div>
-  <div class="footer_content counter">
-    <p>{{counter}} &#8212; 21</p>
   </div>
 </div>
