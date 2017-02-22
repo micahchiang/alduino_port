@@ -11,11 +11,11 @@
         <div class="category_title_box">
           <p>About</p>
         </div>
-        <div class="category_content_box" style="font-size:20px;">
+        <div class="category_content_box" style="font-size:20px;line-height:1.4;">
           Frankie Alduino earned his BFA in Photography from the University of Central Florida. A current resident of New York, Alduino cut his teeth at The Richard Avedon Foundation and thereafter transitioned to work in-house at Annie Leibovitz Studio, He has acquired a visual vocabulary steeped in the richest history of portraiture.
         </div>
         <div class="category_title_box">
-          <p>Production Work</p>
+          <p>Production Work (Abridged)</p>
         </div>
         <div class="category_content_box list_box">
           <ul style="font-size:20px;line-height:1.4;margin-left:5px;">
@@ -39,7 +39,7 @@
         <div class="footer_block" [ngClass]="{'info_footer_block': showInfo}">
           <a *ngIf="showInfo" style="text-decoration:none;color:white;" href="mailto:studio@frankiealduino.com">studio@frankiealduino.com</a>
         </div>
-        <div class="footer_block" style="text-align:right;" [ngClass]="{'info_footer_block': showInfo}">
+        <div class="footer_block" [ngClass]="{'info_footer_block': showInfo}">
           <p *ngIf="!showInfo" style="text-align:right;">{{counter}} &#8212; 21</p>
           <a *ngIf="showInfo" target="_blank" href="https://www.instagram.com/frankiealduino/" class="insta_link">Instagram: @frankiealduino</a>
         </div>

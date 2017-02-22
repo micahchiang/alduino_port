@@ -126,7 +126,7 @@
     display:inline-block;
     vertical-align: top;
     width: 30%;
-    margin: 4em auto 0 auto;
+    margin: 3em auto 0 auto;
     @media only screen 
         and (max-device-width: 740px) 
             { 
@@ -138,7 +138,7 @@
 .category_content_box {
     display: inline-block;
     width: 69%;
-    margin: 3em auto 0 auto;
+    margin: 2em auto 0 auto;
     @media only screen 
         and (max-device-width: 740px) 
             { 
@@ -147,7 +147,7 @@
                 width: 90%;
             }
     &.list_box {
-        margin-top: 4em;
+        margin-top: 2.8em;
         margin-bottom: 8.5em;
         @media only screen
             and (max-device-width: 740px)
