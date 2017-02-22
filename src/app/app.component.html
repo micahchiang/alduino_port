@@ -1,7 +1,7 @@
 <div class="wrapper" [ngClass]="{'show_overlay':showInfo}">
   <div class="app-container">
     <div class="header">
-      <a href="/" class="home_link" [ngClass]="{'info_header':showInfo}">FRANKIE ALDUINO</a>
+      <a class="home_link" [ngClass]="{'info_header':showInfo}">FRANKIE ALDUINO</a>
     </div>
     <div class="content">
       <div *ngIf="!showInfo" class="left_nav" (click)="previous()"></div>
@@ -33,8 +33,8 @@
       </div>
       <div class="footer">
         <div class="footer_block" [ngClass]="{'info_footer_close':showInfo}">
-          <a style="color:#9B9B9B;" class="toggle_link" *ngIf="!showInfo" (click)='toggleInfo()' href='#'>INFO</a>
-          <a style="color:white;"class="toggle_link" *ngIf="showInfo"  (click)='toggleInfo()' href='#'>CLOSE</a>
+          <a style="color:#9B9B9B;" class="toggle_link" *ngIf="!showInfo" (click)='toggleInfo()'>INFO</a>
+          <a style="color:white;"class="toggle_link" *ngIf="showInfo"  (click)='toggleInfo()'>CLOSE</a>
         </div>
         <div class="footer_block" [ngClass]="{'info_footer_block': showInfo}">
           <a *ngIf="showInfo" style="text-decoration:none;color:white;" href="mailto:studio@frankiealduino.com">studio@frankiealduino.com</a>

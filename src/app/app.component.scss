@@ -109,6 +109,11 @@
         .footer_block {
             width: 32%;
             display: inline-block;
+            &:first-child {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
         }
 
         .toggle_link {
