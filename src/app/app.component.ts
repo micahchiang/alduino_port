@@ -57,7 +57,6 @@ export class AppComponent {
           }
           this.photoSetArray.push(photoset);
       }
-      console.log(this.photoSetArray);
   } 
 
   next() {
