@@ -5,13 +5,11 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { PhotoRollComponent } from './photo-roll/photo-roll.component';
-import { DefaultImage } from './default-image.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PhotoRollComponent,
-    DefaultImage
+    PhotoRollComponent
   ],
   imports: [
     BrowserModule,
