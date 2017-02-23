@@ -6,7 +6,7 @@
     <div class="content">
       <div *ngIf="!showInfo" class="left_nav" (click)="previous()"></div>
       <div *ngIf="!showInfo" class="right_nav" (click)="next()"></div>
-      <photo-roll *ngIf="!showInfo" [counter]='counter' [imageLeft]='imageLeft' [imageCenter]='imageCenter' [imageRight]='imageRight'></photo-roll>
+      <photo-roll *ngIf="!showInfo" [photoset]="photoSetArray[counter-1]"></photo-roll>
       <div *ngIf="showInfo" class="content" style="color:white;max-height:800px;">
         <div class="category_title_box">
           <p>About</p>

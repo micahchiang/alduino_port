@@ -8,19 +8,63 @@ import { Component, trigger, state, style, transition, animate, keyframes } from
 export class AppComponent {
   counter = 1;
   showInfo = false;
-  firstLoad = true;
-  imageLeft = 'assets/imgs/'+this.counter+'_l.jpg';
-  imageCenter = 'assets/imgs/'+this.counter+'_c.jpg';
-  imageRight = 'assets/imgs/'+this.counter+'_r.jpg'; 
+  imageArray = [
+    'assets/imgs/1_c.jpg',
+    'assets/imgs/2_c.jpg',
+    'assets/imgs/2_r.jpg',
+    'assets/imgs/3_r.jpg',
+    'assets/imgs/4_l.jpg',
+    'assets/imgs/5_r.jpg',
+    'assets/imgs/6_l.jpg',
+    'assets/imgs/6_r.jpg',
+    'assets/imgs/7_c.jpg',
+    'assets/imgs/8_l.jpg',
+    'assets/imgs/8_r.jpg',
+    'assets/imgs/9_c.jpg',
+    'assets/imgs/9_l.jpg',
+    'assets/imgs/10_r.jpg',
+    'assets/imgs/11_l.jpg',
+    'assets/imgs/12_c.jpg',
+    'assets/imgs/13_c.jpg',
+    'assets/imgs/13_r.jpg',
+    'assets/imgs/14_l.jpg',
+    'assets/imgs/14_r.jpg',
+    'assets/imgs/15_c.jpg',
+    'assets/imgs/16_c.jpg',
+    'assets/imgs/16_r.jpg',
+    'assets/imgs/17_c.jpg',
+    'assets/imgs/17_l.jpg',
+    'assets/imgs/18_r.jpg',
+    'assets/imgs/19_c.jpg',
+    'assets/imgs/20_l.jpg',
+    'assets/imgs/20_r.jpg',
+    'assets/imgs/21_l.jpg',
+  ];
+
+  photoSetArray = [];
+
+  constructor() {
+    for(let i = 0; i < 21; i++) {
+          let photoset = [
+            'assets/imgs/'+(i+1)+'_l.jpg',
+            'assets/imgs/'+(i+1)+'_c.jpg',
+            'assets/imgs/'+(i+1)+'_r.jpg'
+          ];
+          for(let j = 0; j < photoset.length; j++) {
+            if(this.imageArray.indexOf(photoset[j]) < 0){
+              photoset[j] = 'assets/imgs/placeholder.jpg';
+            }
+          }
+          this.photoSetArray.push(photoset);
+      }
+      console.log(this.photoSetArray);
+  } 
 
   next() {
     this.counter++;
     if(this.counter == 22){
       this.counter = 1;
     }
-    this.imageLeft = 'assets/imgs/'+this.counter+'_l.jpg';
-    this.imageCenter = 'assets/imgs/'+this.counter+'_c.jpg';
-    this.imageRight = 'assets/imgs/'+this.counter+'_r.jpg';
   }
 
   previous() {
@@ -28,15 +72,9 @@ export class AppComponent {
     if(this.counter == 0){
       this.counter = 21;
     }
-      this.imageLeft = 'assets/imgs/'+this.counter+'_l.jpg';
-      this.imageCenter = 'assets/imgs/'+this.counter+'_c.jpg';
-      this.imageRight = 'assets/imgs/'+this.counter+'_r.jpg';
-    }
+  }
 
     toggleInfo() {
-      if(this.firstLoad = true){
-        this.firstLoad = false;
-      }
       this.showInfo = !this.showInfo
     }
 }
