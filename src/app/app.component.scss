@@ -27,7 +27,7 @@
         }
     .header {
         text-align: right;
-        padding: 2em 0 1em 0;
+        padding: 2em 0 0 0;
         font-size: 16px;
         width: 93%;
         margin: 0 auto;
@@ -38,6 +38,33 @@
             font-size: 22px;
             letter-spacing: 0.57px;
         }
+    }
+
+    .social__media-container {
+      width: 96%;
+      position: absolute;
+      text-align: right;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.25s linear;
+      .social__media-list {
+        li {
+          a {
+            font-size: 14px;
+            text-decoration: none;
+            color: #000000;
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    .social__media-show {
+      visibility: visible;
+      opacity: 1;
+      transition: all 0.25s linear;
     }
 
     .info_header {
@@ -60,9 +87,9 @@
     &:hover {
         cursor: url('/assets/imgs/rightArrow@1x.png'), e-resize;
     }
-        @media only screen 
-        and (max-device-width: 740px) 
-            { 
+        @media only screen
+        and (max-device-width: 740px)
+            {
                 top:6em;
                 height: 40%;
         }
@@ -78,9 +105,9 @@
     &:hover {
         cursor: url('/assets/imgs/leftArrow@1x.png'), w-resize;
     }
-    @media only screen 
-        and (max-device-width: 740px) 
-            { 
+    @media only screen
+        and (max-device-width: 740px)
+            {
                 top:6em;
                 height: 40%;
         }
@@ -132,9 +159,9 @@
     vertical-align: top;
     width: 30%;
     margin: 3em auto 0 auto;
-    @media only screen 
-        and (max-device-width: 740px) 
-            { 
+    @media only screen
+        and (max-device-width: 740px)
+            {
                 margin: 1em auto 0 auto;
                 width: 50%;
             }
@@ -144,9 +171,9 @@
     display: inline-block;
     width: 69%;
     margin: 2em auto 0 auto;
-    @media only screen 
-        and (max-device-width: 740px) 
-            { 
+    @media only screen
+        and (max-device-width: 740px)
+            {
                 margin: 1em auto 0 auto;
                 font-size: 16px !important;
                 width: 90%;
@@ -161,7 +188,7 @@
                 margin-bottom: 1em !important;
             }
         ul {
-            @media only screen 
+            @media only screen
                 and (max-device-width: 740px)
                 {
                     font-size:16px !important;

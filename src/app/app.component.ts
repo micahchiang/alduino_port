@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   counter = 1;
-  showInfo = false;
+  showInfo: boolean;
+  showSocialMedia: boolean;
   imageArray = [
     'assets/imgs/1_c.jpg',
     'assets/imgs/2_c.jpg',
@@ -44,36 +45,46 @@ export class AppComponent {
   photoSetArray = [];
 
   constructor() {
-    for(let i = 0; i < 21; i++) {
-          let photoset = [
-            'assets/imgs/'+(i+1)+'_l.jpg',
-            'assets/imgs/'+(i+1)+'_c.jpg',
-            'assets/imgs/'+(i+1)+'_r.jpg'
+    this.showInfo = false;
+    this.showSocialMedia = false;
+    for (let i = 0; i < 21; i++) {
+          const photoset = [
+            'assets/imgs/' + (i + 1) + '_l.jpg',
+            'assets/imgs/' + (i + 1) + '_c.jpg',
+            'assets/imgs/' + (i + 1) + '_r.jpg'
           ];
-          for(let j = 0; j < photoset.length; j++) {
-            if(this.imageArray.indexOf(photoset[j]) < 0){
+          for (let j = 0; j < photoset.length; j++) {
+            if (this.imageArray.indexOf(photoset[j]) < 0){
               photoset[j] = 'assets/imgs/placeholder.jpg';
             }
           }
           this.photoSetArray.push(photoset);
       }
-  } 
+  }
 
   next() {
     this.counter++;
-    if(this.counter == 22){
+    if (this.counter === 22) {
       this.counter = 1;
     }
   }
 
   previous() {
     this.counter--;
-    if(this.counter == 0){
+    if (this.counter === 0) {
       this.counter = 21;
     }
   }
 
-    toggleInfo() {
-      this.showInfo = !this.showInfo
-    }
+  toggleInfo() {
+    this.showInfo = !this.showInfo;
+  }
+
+  onMouseOver() {
+    this.showSocialMedia = !this.showSocialMedia;
+  }
+
+  onMouseLeave() {
+    this.showSocialMedia = false;
+  }
 }
