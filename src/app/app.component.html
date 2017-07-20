@@ -1,7 +1,38 @@
 <div class="wrapper" [ngClass]="{'show_overlay':showInfo}">
   <div class="app-container">
     <div class="header">
-      <a class="home_link" [ngClass]="{'info_header':showInfo}">FRANKIE ALDUINO</a>
+      <a class="home_link" (mouseover)="onMouseOver()" [ngClass]="{'info_header':showInfo}">FRANKIE ALDUINO</a>
+    </div>
+    <div
+      class="social__media-container"
+      [ngClass]="{'social__media-show': showSocialMedia}"
+      (mouseleave)="onMouseLeave()"
+    >
+      <ul
+        class="social__media-list"
+      >
+        <li>
+          <a href="mailto:studio@frankiealduino.com">
+            studio@frankiealduino.com
+          </a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            href="https://www.instagram.com/frankiealduino/"
+          >
+            Instagram
+          </a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            href="www.linkedin.com/in/frankie-alduino-0957b2aa/"
+          >
+            Linkedin
+          </a>
+        </li>
+      </ul>
     </div>
     <div class="content">
       <div *ngIf="!showInfo" class="left_nav" (click)="previous()"></div>
