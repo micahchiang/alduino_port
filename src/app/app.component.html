@@ -35,9 +35,10 @@
       </ul>
     </div>
     <div class="content">
-      <div *ngIf="!showInfo" class="left_nav" (click)="previous()"></div>
-      <div *ngIf="!showInfo" class="right_nav" (click)="next()"></div>
-      <photo-roll *ngIf="!showInfo" [photoset]="photoSetArray[counter-1]"></photo-roll>
+      <photo-roll
+        *ngIf="!showInfo"
+        (photoCount)="updatePhotoCount($event)"
+      ></photo-roll>
       <div *ngIf="showInfo" class="content" style="color:white;max-height:800px;">
         <div class="category_title_box">
           <p>About</p>
@@ -71,7 +72,7 @@
           <a *ngIf="showInfo" style="text-decoration:none;color:white;" href="mailto:studio@frankiealduino.com">studio@frankiealduino.com</a>
         </div>
         <div class="footer_block" [ngClass]="{'info_footer_block': showInfo}">
-          <p *ngIf="!showInfo" style="text-align:right;">{{counter}} &#8212; 21</p>
+          <p *ngIf="!showInfo" style="text-align:right;">{{photoCount}} &#8212; 26</p>
           <a *ngIf="showInfo" target="_blank" href="https://www.instagram.com/frankiealduino/" class="insta_link">Instagram: @frankiealduino</a>
         </div>
       </div>
@@ -79,35 +80,35 @@
   </div>
 </div>
 
-<div style="display:none; visibility:hidden;">
-    <img src='assets/imgs/1_c.jpg'>
-    <img src='assets/imgs/2_c.jpg'>
-    <img src='assets/imgs/2_r.jpg'>
-    <img src='assets/imgs/3_r.jpg'>
-    <img src='assets/imgs/4_l.jpg'>
-    <img src='assets/imgs/5_r.jpg'>
-    <img src='assets/imgs/6_l.jpg'>
-    <img src='assets/imgs/6_r.jpg'>
-    <img src='assets/imgs/7_c.jpg'>
-    <img src='assets/imgs/8_l.jpg'>
-    <img src='assets/imgs/8_r.jpg'>
-    <img src='assets/imgs/9_c.jpg'>
-    <img src='assets/imgs/9_l.jpg'>
-    <img src='assets/imgs/10_r.jpg'>
-    <img src='assets/imgs/11_l.jpg'>
-    <img src='assets/imgs/12_c.jpg'>
-    <img src='assets/imgs/13_c.jpg'>
-    <img src='assets/imgs/13_r.jpg'>
-    <img src='assets/imgs/14_l.jpg'>
-    <img src='assets/imgs/14_r.jpg'>
-    <img src='assets/imgs/15_c.jpg'>
-    <img src='assets/imgs/16_c.jpg'>
-    <img src='assets/imgs/16_r.jpg'>
-    <img src='assets/imgs/17_c.jpg'>
-    <img src='assets/imgs/17_l.jpg'>
-    <img src='assets/imgs/18_r.jpg'>
-    <img src='assets/imgs/19_c.jpg'>
-    <img src='assets/imgs/20_l.jpg'>
-    <img src='assets/imgs/20_r.jpg'>
-    <img src='assets/imgs/21_l.jpg'>
-</div>
+<!--<div style="display:none; visibility:hidden;">-->
+    <!--<img src='assets/imgs/1_c.jpg'>-->
+    <!--<img src='assets/imgs/2_c.jpg'>-->
+    <!--<img src='assets/imgs/2_r.jpg'>-->
+    <!--<img src='assets/imgs/3_r.jpg'>-->
+    <!--<img src='assets/imgs/4_l.jpg'>-->
+    <!--<img src='assets/imgs/5_r.jpg'>-->
+    <!--<img src='assets/imgs/6_l.jpg'>-->
+    <!--<img src='assets/imgs/6_r.jpg'>-->
+    <!--<img src='assets/imgs/7_c.jpg'>-->
+    <!--<img src='assets/imgs/8_l.jpg'>-->
+    <!--<img src='assets/imgs/8_r.jpg'>-->
+    <!--<img src='assets/imgs/9_c.jpg'>-->
+    <!--<img src='assets/imgs/9_l.jpg'>-->
+    <!--<img src='assets/imgs/10_r.jpg'>-->
+    <!--<img src='assets/imgs/11_l.jpg'>-->
+    <!--<img src='assets/imgs/12_c.jpg'>-->
+    <!--<img src='assets/imgs/13_c.jpg'>-->
+    <!--<img src='assets/imgs/13_r.jpg'>-->
+    <!--<img src='assets/imgs/14_l.jpg'>-->
+    <!--<img src='assets/imgs/14_r.jpg'>-->
+    <!--<img src='assets/imgs/15_c.jpg'>-->
+    <!--<img src='assets/imgs/16_c.jpg'>-->
+    <!--<img src='assets/imgs/16_r.jpg'>-->
+    <!--<img src='assets/imgs/17_c.jpg'>-->
+    <!--<img src='assets/imgs/17_l.jpg'>-->
+    <!--<img src='assets/imgs/18_r.jpg'>-->
+    <!--<img src='assets/imgs/19_c.jpg'>-->
+    <!--<img src='assets/imgs/20_l.jpg'>-->
+    <!--<img src='assets/imgs/20_r.jpg'>-->
+    <!--<img src='assets/imgs/21_l.jpg'>-->
+<!--</div>-->

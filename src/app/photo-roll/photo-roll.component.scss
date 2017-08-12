@@ -1,19 +1,52 @@
 .photoset_container {
-    height: 100%;
+  height: 100%;
+  text-align: center;
+
+  .photoset_box {
+    display: inline-block;
     text-align: center;
-
-    .photoset_box {
-        width: 32%;
-        display: inline-block;
-        text-align: center;
-        img {
-            width: 100%;
-            margin: 10px auto;
-        }
-
-        .placeholder {
-            width: 100%;
-            visibility: hidden;
-        }
+    img {
+      width: auto;
+      height: 100%;
+      max-height: 600px;
+      margin: 10px auto;
     }
+
+    .placeholder {
+      width: 100%;
+      visibility: hidden;
+    }
+  }
+
+  .right_nav {
+    width: 49%;
+    height: 60%;
+    z-index: 10;
+    top: 23%;
+    right: 0;
+    position: absolute;
+    &:hover {
+      cursor: url('/assets/imgs/rightArrow@1x.png'), e-resize;
+    }
+    @media only screen and (max-device-width: 740px) {
+      top: 6em;
+      height: 40%;
+    }
+  }
+
+  .left_nav {
+    width: 49%;
+    height: 60%;
+    z-index: 10;
+    top: 23%;
+    left: 0;
+    position: absolute;
+    &:hover {
+      cursor: url('/assets/imgs/leftArrow@1x.png'), w-resize;
+    }
+    @media only screen and (max-device-width: 740px) {
+      top: 6em;
+      height: 40%;
+    }
+  }
 }

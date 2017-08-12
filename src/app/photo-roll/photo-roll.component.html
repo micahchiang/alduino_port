@@ -1,11 +1,7 @@
 <div class="photoset_container">
-    <div class="photoset_box position_one">
-      <img src={{photoset[0]}}>
-    </div>
-    <div class="photoset_box position_two">
-      <img src={{photoset[1]}}>
-    </div>
-    <div class="photoset_box position_three">
-      <img src={{photoset[2]}}>
-    </div>
+  <div class="left_nav" (click)="previous()"></div>
+  <div class="right_nav" (click)="next()"></div>
+  <div class="photoset_box position_two">
+    <img src="/assets/imgs/{{counter.toString()}}.jpg">
+  </div>
 </div>

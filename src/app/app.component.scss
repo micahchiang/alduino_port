@@ -19,6 +19,7 @@
 
 .app-container {
     margin: 0 auto;
+    width: 100%;
     max-width: 1240px;
     position: relative;
     @media only screen
@@ -75,42 +76,6 @@
         width: 95%;
         margin: 0 auto;
     }
-}
-
-.right_nav {
-    width: 49%;
-    height: 60%;
-    z-index: 10;
-    top: 15%;
-    right: 0;
-    position: absolute;
-    &:hover {
-        cursor: url('/assets/imgs/rightArrow@1x.png'), e-resize;
-    }
-        @media only screen
-        and (max-device-width: 740px)
-            {
-                top:6em;
-                height: 40%;
-        }
-}
-
-.left_nav {
-    width: 49%;
-    height: 60%;
-    z-index: 10;
-    top: 15%;
-    left: 0;
-    position: absolute;
-    &:hover {
-        cursor: url('/assets/imgs/leftArrow@1x.png'), w-resize;
-    }
-    @media only screen
-        and (max-device-width: 740px)
-            {
-                top:6em;
-                height: 40%;
-        }
 }
 
 .show_overlay {

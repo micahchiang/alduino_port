@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'photo-roll',
@@ -7,12 +7,31 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PhotoRollComponent implements OnInit {
 
-  @Input() photoset: Array<String>;
-  
-  constructor() { }
+  counter: number;
+  @Output() photoCount = new EventEmitter<number>();
+
+  constructor() {
+    this.counter = 1;
+  }
 
   ngOnInit() {
 
+  }
+
+  next() {
+    this.counter++;
+    if (this.counter === 27) {
+      this.counter = 1;
+    }
+      this.photoCount.emit(this.counter);
+  }
+
+  previous() {
+    this.counter--;
+    if (this.counter === 0) {
+      this.counter = 26;
+    }
+      this.photoCount.emit(this.counter);
   }
 
 }
