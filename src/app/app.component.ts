@@ -10,8 +10,6 @@ export class AppComponent {
   showSocialMedia: boolean;
   @Input() photoCount: number;
 
-  photoSetArray = [];
-
   constructor() {
     this.showInfo = false;
     this.showSocialMedia = false;

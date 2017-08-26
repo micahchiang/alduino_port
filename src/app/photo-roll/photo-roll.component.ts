@@ -9,9 +9,13 @@ export class PhotoRollComponent implements OnInit {
 
   counter: number;
   @Output() photoCount = new EventEmitter<number>();
+  didClickNext: boolean;
+  didClickPrevious: boolean;
 
   constructor() {
     this.counter = 1;
+    this.didClickNext = false;
+    this.didClickPrevious = false
   }
 
   ngOnInit() {

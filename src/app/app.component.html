@@ -27,7 +27,7 @@
         <li>
           <a
             target="_blank"
-            href="www.linkedin.com/in/frankie-alduino-0957b2aa/"
+            href="https://www.linkedin.com/in/frankie-alduino-0957b2aa/"
           >
             Linkedin
           </a>
@@ -39,76 +39,22 @@
         *ngIf="!showInfo"
         (photoCount)="updatePhotoCount($event)"
       ></photo-roll>
-      <div *ngIf="showInfo" class="content" style="color:white;max-height:800px;">
-        <div class="category_title_box">
-          <p>About</p>
-        </div>
-        <div class="category_content_box" style="font-size:20px;line-height:1.4;">
-          Frankie Alduino earned his BFA in Photography from the University of Central Florida. A current resident of New York, Alduino cut his teeth at The Richard Avedon Foundation and thereafter transitioned to work in-house at Annie Leibovitz Studio. He has acquired a visual vocabulary steeped in the richest history of portraiture.
-        </div>
-        <div class="category_title_box">
-          <p>Production Work (Abridged)</p>
-        </div>
-        <div class="category_content_box list_box">
-          <ul style="font-size:20px;line-height:1.4;margin-left:5px;">
-            <li>2016 &#8212; Vogue &#8212; Adele</li>
-            <li>2016 &#8212; Vogue &#8212; Michelle Obama</li>
-            <li>2016 &#8212; Moncler F/W</li>
-            <li>2016 &#8212; Pirelli</li>
-            <li>2015 &#8212; Vogue &#8212; Angelina Jolie</li>
-            <li>2015 &#8212; Dunhill S/S</li>
-            <li>2014 &#8212; Vogue &#8212; Amy Adams</li>
-            <li>2014 &#8212; Louis Vuitton F/W</li>
-            <li>2014 &#8212; Prada F/W</li>
-          </ul>
-        </div>
+      <personal-info
+        *ngIf="showInfo"
+      ></personal-info>
+    </div>
+    <div class="footer">
+      <div class="footer_block" [ngClass]="{'info_footer_close':showInfo}">
+        <a style="color:#9B9B9B;" class="toggle_link" *ngIf="!showInfo" (click)='toggleInfo()'>INFO</a>
+        <a style="color:white;"class="toggle_link" *ngIf="showInfo"  (click)='toggleInfo()'>CLOSE</a>
       </div>
-      <div class="footer">
-        <div class="footer_block" [ngClass]="{'info_footer_close':showInfo}">
-          <a style="color:#9B9B9B;" class="toggle_link" *ngIf="!showInfo" (click)='toggleInfo()'>INFO</a>
-          <a style="color:white;"class="toggle_link" *ngIf="showInfo"  (click)='toggleInfo()'>CLOSE</a>
-        </div>
-        <div class="footer_block" [ngClass]="{'info_footer_block': showInfo}">
-          <a *ngIf="showInfo" style="text-decoration:none;color:white;" href="mailto:studio@frankiealduino.com">studio@frankiealduino.com</a>
-        </div>
-        <div class="footer_block" [ngClass]="{'info_footer_block': showInfo}">
-          <p *ngIf="!showInfo" style="text-align:right;">{{photoCount}} &#8212; 26</p>
-          <a *ngIf="showInfo" target="_blank" href="https://www.instagram.com/frankiealduino/" class="insta_link">Instagram: @frankiealduino</a>
-        </div>
+      <div class="footer_block" [ngClass]="{'info_footer_block': showInfo}">
+        <a *ngIf="showInfo" style="text-decoration:none;color:white;" href="mailto:studio@frankiealduino.com">studio@frankiealduino.com</a>
+      </div>
+      <div class="footer_block" [ngClass]="{'info_footer_block': showInfo}">
+        <p *ngIf="!showInfo" style="text-align:right;">{{photoCount}} &#8212; 26</p>
+        <a *ngIf="showInfo" target="_blank" href="https://www.instagram.com/frankiealduino/" class="insta_link">Instagram: @frankiealduino</a>
       </div>
     </div>
   </div>
 </div>
-
-<!--<div style="display:none; visibility:hidden;">-->
-    <!--<img src='assets/imgs/1_c.jpg'>-->
-    <!--<img src='assets/imgs/2_c.jpg'>-->
-    <!--<img src='assets/imgs/2_r.jpg'>-->
-    <!--<img src='assets/imgs/3_r.jpg'>-->
-    <!--<img src='assets/imgs/4_l.jpg'>-->
-    <!--<img src='assets/imgs/5_r.jpg'>-->
-    <!--<img src='assets/imgs/6_l.jpg'>-->
-    <!--<img src='assets/imgs/6_r.jpg'>-->
-    <!--<img src='assets/imgs/7_c.jpg'>-->
-    <!--<img src='assets/imgs/8_l.jpg'>-->
-    <!--<img src='assets/imgs/8_r.jpg'>-->
-    <!--<img src='assets/imgs/9_c.jpg'>-->
-    <!--<img src='assets/imgs/9_l.jpg'>-->
-    <!--<img src='assets/imgs/10_r.jpg'>-->
-    <!--<img src='assets/imgs/11_l.jpg'>-->
-    <!--<img src='assets/imgs/12_c.jpg'>-->
-    <!--<img src='assets/imgs/13_c.jpg'>-->
-    <!--<img src='assets/imgs/13_r.jpg'>-->
-    <!--<img src='assets/imgs/14_l.jpg'>-->
-    <!--<img src='assets/imgs/14_r.jpg'>-->
-    <!--<img src='assets/imgs/15_c.jpg'>-->
-    <!--<img src='assets/imgs/16_c.jpg'>-->
-    <!--<img src='assets/imgs/16_r.jpg'>-->
-    <!--<img src='assets/imgs/17_c.jpg'>-->
-    <!--<img src='assets/imgs/17_l.jpg'>-->
-    <!--<img src='assets/imgs/18_r.jpg'>-->
-    <!--<img src='assets/imgs/19_c.jpg'>-->
-    <!--<img src='assets/imgs/20_l.jpg'>-->
-    <!--<img src='assets/imgs/20_r.jpg'>-->
-    <!--<img src='assets/imgs/21_l.jpg'>-->
-<!--</div>-->
