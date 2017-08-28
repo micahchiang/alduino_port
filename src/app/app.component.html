@@ -38,6 +38,7 @@
       <photo-roll
         *ngIf="!showInfo"
         (photoCount)="updatePhotoCount($event)"
+        [counter]="photoCount"
       ></photo-roll>
       <personal-info
         *ngIf="showInfo"
@@ -53,7 +54,7 @@
       </div>
       <div class="footer_block" [ngClass]="{'info_footer_block': showInfo}">
         <p *ngIf="!showInfo" style="text-align:right;">{{photoCount}} &#8212; 26</p>
-        <a *ngIf="showInfo" target="_blank" href="https://www.instagram.com/frankiealduino/" class="insta_link">Instagram: @frankiealduino</a>
+        <a *ngIf="showInfo" target="_blank" href="https://www.instagram.com/frankiealduino/" class="insta_link">Instagram: @falduino</a>
       </div>
     </div>
   </div>

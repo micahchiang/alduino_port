@@ -7,7 +7,7 @@ import {Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
 })
 export class PhotoRollComponent implements OnInit {
 
-  counter: number;
+  @Input() counter: number;
   @Output() photoCount = new EventEmitter<number>();
   didClickNext: boolean;
   didClickPrevious: boolean;
@@ -15,11 +15,11 @@ export class PhotoRollComponent implements OnInit {
   constructor() {
     this.counter = 1;
     this.didClickNext = false;
-    this.didClickPrevious = false
+    this.didClickPrevious = false;
   }
 
   ngOnInit() {
-
+    console.log(this.counter);
   }
 
   next() {
