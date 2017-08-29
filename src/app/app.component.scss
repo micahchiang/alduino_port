@@ -28,7 +28,7 @@
         }
     .header {
         text-align: right;
-        padding: 2em 0 0 0;
+        padding: 2em 0 5px 0;
         font-size: 16px;
         width: 93%;
         margin: 0 auto;
@@ -50,8 +50,9 @@
       transition: all 0.25s linear;
       .social__media-list {
         li {
+          padding: 5px 0;
           a {
-            font-size: 14px;
+            font-size: 16px;
             text-decoration: none;
             color: #000000;
             &:hover {
